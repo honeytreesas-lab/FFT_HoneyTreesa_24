@@ -1,0 +1,155 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background:url("./OIP24.jpg");
+            background-size: cover;
+        }
+        h1{
+            background-color: rgb(30, 90, 140);
+            color: white;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            margin-top: 10px;
+            height: 100px;
+            box-sizing: border-box;
+            border-radius: 8px;
+
+        }
+        form{
+            width: 50%;
+            margin: auto;
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(240, 248, 255);
+            border: 2px solid black;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px gray;
+        }
+        button{
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+
+        label{
+            display: inline-block;
+            width: 140px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: rgb(20, 50, 80);
+        }
+
+        input{
+            width: 50%;
+            padding: 9px;
+            border: 1px solid rgb(100, 130, 160);
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        button:hover{
+            background-color: rgb(40, 100, 170);
+    
+        }
+
+        #Para{
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: rgb(230, 242, 255);
+            color: rgb(20, 50, 80);
+            line-height: 1.6;
+        }
+
+        #Para h1{
+            width: auto;
+            height: auto;
+            padding: 10px;
+            margin-bottom:  10px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- htm1----->
+    <form id="gradeForm">
+        <h1>Grade Calculator</h1>
+        <label>Student Name:</label>
+        <input type="text" name="n1" id="i1" required><br><br>
+        <label>Student Reg:</label>
+        <input type="number" name="n2" id="i2" required><br><br>
+        <label>HTML Mark:</label>
+        <input type="number" name="n3" id="i3" min="0" max="100" required><br><br>
+        <label>CSS Mark:</label>
+        <input type="number" name="n4" id="i4" min="0" max="100" required><br><br>
+        <label>JS Mark:</label>
+        <input type="number" name="n5" id="i5" min="0" max="100" required><br><br>
+        <button type="button" onclick="check()">Results</button>
+        <button type="reset" onclick="resetResult()">Reset</button>
+        <p id="Para"></p>
+    </form>
+    <!---JAVA SCRIPT-->
+    <script>
+        function check(){
+            if (!document.getElementById("gradeForm").checkValidity()) {
+                document.getElementById("gradeForm").reportValidity();
+                return;
+            }
+            let n1 = document.getElementById('i1').value;
+            let n2 = document.getElementById('i2').value;
+            let n3 = Number(document.getElementById('i3').value);
+            let n4 = Number(document.getElementById('i4').value);
+            let n5 = Number(document.getElementById('i5').value);
+            let total = n3+n4+n5;
+            let avg = total/3;
+            let percentage = (total/300)*100;
+            let grade;
+            if (avg >=80){
+                grade = "A";
+            }else if(avg >=60){
+                grade = "B";
+            }else if(avg >=40){
+                grade = "C";
+            }else if(avg <40){
+                grade = "D";
+            }else{
+                grade = "Absent";
+            }
+            let status;
+            if(avg >=40){
+                status = "Pass";
+            }else{
+                status = "Fail";
+            }
+            document.getElementById('Para').innerHTML =
+            "<h1>Student Details</h1>"+"<br>"+
+            "student Name: "+n1+"<br>"+
+            "student Reg: "+n2+"<br>"+
+            "HTML Marks: "+n3+"<br>"+
+            "CSS Marks: "+n4+"<br>"+
+            "JS Marks: "+n5+"<br>"+
+            "Total Marks: "+total+"<br>"+
+            "Avg Marks: "+avg+"<br>"+
+            "Percentage Marks: "+percentage+"%<br>"+
+            "Grade: "+grade+"<br>"+
+            "Status: "+status+"<br>";
+        }
+
+        function resetResult() {
+            document.getElementById("Para").innerHTML = "";
+        }
+    </script>
+    
+</body>
+</html>
