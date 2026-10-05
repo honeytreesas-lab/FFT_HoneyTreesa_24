@@ -1,0 +1,657 @@
+
+<html>
+<head>
+    <title>Semantic Department Website</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header{
+            background: brown;
+            padding: 20px;
+        }
+
+        h1{
+            text-align: center;
+            padding-top: 10px;
+            font-family: monospace;
+            text-shadow: 2px 4px 8px white;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        nav li{
+            color: white;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            list-style-type: none;
+        }
+
+        nav li a{
+            color: white;
+            text-decoration: none;
+        }
+
+        nav li a:hover{
+            color: yellow;
+        }
+
+        section{
+            padding: 20px;
+        }
+
+        p{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        h2{
+            text-align: center;
+            margin-top: 20px;
+            font-size: 40px;
+            color: rgb(14, 167, 164);
+            font-family: cursive;
+            text-shadow: 2px 4px 8px gray;
+        }
+
+        h3{
+            text-align: center;
+            margin-top: 20px;
+            color: brown;
+        }
+
+
+        
+
+        .highlight-images{
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        img{
+            height: 150px;
+            width: 150px;
+            border-radius: 20px;
+            box-shadow: 4px 6px 10px black;
+        }
+
+        .highlight-names{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 5px;
+        }
+
+        .highlight-names p{
+            width: 150px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+
+     
+
+        .cards{
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .card{
+            background-color: rgb(132, 202, 230);
+            width: 280px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 3px 5px 10px gray;
+        }
+
+
+        
+
+        .course-card{
+            background-color: rgb(234, 171, 171);
+            width: 280px;
+            min-height: 300px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 3px 5px 10px gray;
+        }
+
+        .course-card h3{
+            margin-top: 5px;
+            margin-bottom: 25px;
+        }
+
+        .course-card p{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+
+     
+
+        table{
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: rgb(173, 227, 232);
+        }
+
+        th{
+            background-color: brown;
+            color: white;
+        }
+
+        th, td{
+            border: 1px solid gray;
+            padding: 12px;
+            text-align: center;
+        }
+
+
+     
+
+        .box{
+            background-color: white;
+            width: 90%;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 2px 4px 10px gray;
+            text-align: center;
+        }
+
+
+       
+
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>Semantic Department Website</h1>
+
+    <nav>
+
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Department</a></li>
+        <li><a href="#faculty">Faculty</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#timetable">Time Table</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+
+<!-- HOME SECTION -->
+
+<section id="home">
+
+    <p>
+        The programme stands as a pinnacle of academic excellence,
+        meticulously designed to meet and exceed the dynamic standards
+        set by the industry. This programme provides students with a
+        robust foundation in mathematics, fostering algorithmic thinking,
+        and honing problem-solving skills through the lens of
+        cutting-edge technology. The overarching goal is to empower
+        students with a skill set that transcends traditional boundaries,
+        allowing them to thrive in a rapidly evolving professional landscape.
+    </p>
+
+    <marquee>
+        <h2>Hello MCA Graduates, Welcome to AU</h2>
+    </marquee>
+
+    <h3>Highlights</h3>
+
+
+    <div class="highlight-images">
+
+        <img src="./this_is_engineering-engineer-4690505.jpg"
+        alt="image not found">
+
+        <img src="./brianpenny-robot-8563414.jpg"
+        alt="image not found">
+
+        <img src="./cliff1126-ai-generated-8136171.png"
+        alt="image not found">
+
+        <img src="./blog_104_indie-game-development.md.png"
+        alt="image not found">
+
+    </div>
+
+
+    <div class="highlight-names">
+
+        <p>Gen AI</p>
+        <p>Data Science</p>
+        <p>Cybersecurity</p>
+        <p>Game Development</p>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT DEPARTMENT -->
+
+<section id="about">
+
+    <h2>About Department</h2>
+
+    <div class="cards">
+
+        <article class="card">
+
+            <h3>Vision</h3>
+
+            <p>
+                To become a center of excellence in computer education,
+                innovation and technological development.
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <h3>Mission</h3>
+
+            <p>
+                To provide quality education and practical knowledge
+                while encouraging creativity, innovation and
+                problem-solving skills.
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <h3>Objectives</h3>
+
+            <p>
+                To develop technical skills, programming knowledge,
+                communication skills and professional abilities
+                among students.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- FACULTY -->
+
+<section id="faculty">
+
+    <h2>Faculty</h2>
+
+    <table>
+
+        <tr>
+            <th>Faculty Name</th>
+            <th>Designation</th>
+            <th>Subject Handled</th>
+        </tr>
+
+        <tr>
+            <td>Mr Durga Bravish</td>
+            <td>Professor</td>
+            <td>Data Science</td>
+        </tr>
+
+        <tr>
+            <td>Mr Raghav Kathula</td>
+            <td>Associate Professor</td>
+            <td>Front end Development</td>
+        </tr>
+
+        <tr>
+            <td>Mr.Kushal</td>
+            <td>Assistant Professor</td>
+            <td>Python Programming</td>
+        </tr>
+
+        <tr>
+            <td>Ms.Pramisha A</td>
+            <td>Assistant Professor</td>
+            <td>Discrete Mathematics</td>
+        </tr>
+
+    </table>
+
+</section>
+
+
+<!-- COURSES -->
+
+<section id="courses">
+
+    <h2>Courses</h2>
+
+    <div class="cards">
+
+
+        <article class="course-card">
+
+            <h3>Semester 1</h3>
+
+            <p>Python Programming</p>
+            <p>Discrete Mathematics</p>
+            <p>Data Science</p>
+            <p>Front end Development</p>
+
+        </article>
+
+
+        <article class="course-card">
+
+            <h3>Semester 2</h3>
+
+            <p>Java Programming</p>
+            <p>Data Structures</p>
+            <p>Operating Systems</p>
+            <p>Software Engineering</p>
+
+        </article>
+
+
+        <article class="course-card">
+
+            <h3>Semester 3</h3>
+
+            <p>Data Structures</p>
+            <p>Artificial Intelligence</p>
+            <p>Machine Learning</p>
+            <p>Cloud Computing</p>
+
+        </article>
+
+
+        <article class="course-card">
+
+            <h3>Semester 4</h3>
+
+            <p>Project Work</p>
+            <p>Advanced Web Development</p>
+            <p>Cyber Security</p>
+            <p>Industry Training</p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- TIME TABLE -->
+
+<section id="timetable">
+
+    <h2>Time Table</h2>
+
+    <h3>Class Timetable</h3>
+
+    <table>
+
+        <tr>
+            <th>Day</th>
+            <th>8:00 - 9:00</th>
+            <th>9:00 - 10:00</th>
+            <th>10:00 - 11:00</th>
+            <th>11:00 - 12:00</th>
+            <th>1:00 - 2:00</th>
+        </tr>
+
+        <tr>
+            <td>Monday</td>
+            <td>Data Science</td>
+            <td>Discrete Mathematics</td>
+            <td>Front end Development</td>
+            <td>Python Programming</td>
+            <td>Lab</td>
+        </tr>
+
+        <tr>
+            <td>Tuesday</td>
+            <td>Discrete Mathematics</td>
+            <td>Python Programming</td>
+            <td>Data Science</td>
+            <td>Front end Development</td>
+            <td>Lab</td>
+        </tr>
+
+        <tr>
+            <td>Wednesday</td>
+            <td>Data Structures</td>
+            <td>Discrete Mathematics</td>
+            <td>Python Programming</td>
+            <td>Front end Development</td>
+            <td>Lab</td>
+        </tr>
+
+        <tr>
+            <td>Thursday</td>
+            <td>Front end Development</td>
+            <td>Data Science</td>
+            <td>Python Programming</td>
+            <td>Front end Development</td>
+            <td>Lab</td>
+        </tr>
+
+        <tr>
+            <td>Friday</td>
+            <td>Data Science</td>
+            <td>Discrete Mathematics</td>
+            <td>Python Programming</td>
+            <td>Front end Development</td>
+            <td>Lab</td>
+        </tr>
+
+    </table>
+
+
+    <h3>Lab Schedule</h3>
+
+    <table>
+
+        <tr>
+            <th>Day</th>
+            <th>Lab</th>
+            <th>Time</th>
+        </tr>
+
+        <tr>
+            <td>Monday</td>
+            <td>Python Programming Lab</td>
+            <td>2:00 PM - 4:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Wednesday</td>
+            <td>Front end Development Lab</td>
+            <td>2:00 PM - 4:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Friday</td>
+            <td>Data Science Lab</td>
+            <td>2:00 PM - 4:00 PM</td>
+        </tr>
+
+    </table>
+
+</section>
+
+
+<!-- ACHIEVEMENTS -->
+
+<section id="achievements">
+
+    <h2>Achievements</h2>
+
+    <div class="cards">
+
+        <article class="card">
+
+            <h3>Student Achievements</h3>
+
+            <p>
+                Students participated in national-level hackathons.
+            </p>
+
+            <p>
+                Students won prizes in coding competitions.
+            </p>
+
+            <p>
+                Students completed industry projects.
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <h3>Faculty Achievements</h3>
+
+            <p>
+                Faculty members published research papers.
+            </p>
+
+            <p>
+                Faculty members organized technical workshops.
+            </p>
+
+            <p>
+                Faculty members guided student projects.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- EVENTS -->
+
+<section id="events">
+
+    <h2>Events</h2>
+
+    <div class="cards">
+
+
+        <article class="card">
+
+            <h3>Workshops</h3>
+
+            <p>
+                Workshops on Python Programming, Data Science,
+                Front end Development and Cloud Computing are conducted.
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <h3>Seminars</h3>
+
+            <p>
+                Seminars on emerging technologies and industry trends
+                are organized for students and faculty.
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <h3>Hackathons</h3>
+
+            <p>
+                Hackathons are organized to encourage innovation and
+                problem-solving skills among students.
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <h2>Contact</h2>
+
+    <div class="box">
+
+        <h3>Department Address</h3>
+
+        <p>
+            Semantic Department,<br>
+            School of Computer Applications,<br>
+            Alliance University,<br>
+            Bengaluru, Karnataka, India
+        </p>
+
+        <p>
+            <b>Email:</b> department@example.com
+        </p>
+
+        <p>
+            <b>Phone:</b> +91 98765 43210
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+
+
+
+</body>
+</html>
