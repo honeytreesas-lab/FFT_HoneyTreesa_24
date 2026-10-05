@@ -1,0 +1,714 @@
+<html>
+<head>
+<title>Honey Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fb;
+            color: #222;
+        }
+
+        .home,
+        .about,
+        .education,
+        .skills,
+        .projects,
+        .contact {
+            scroll-margin-top: 100px;
+        }
+
+
+        .header {
+            background-color: #243b55;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            align-items: center;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .header h1 {
+            color: white;
+            font-family: monospace;
+            text-align: left;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            list-style-type: none;
+        }
+
+        .contact-button,
+        .project-button {
+            background-color: #f4a261;
+            border-radius: 6px;
+            color: white;
+            display: inline-block;
+            padding: 12px 18px;
+            text-align: center;
+            transition: 0.4s;
+        }
+
+        .contact-button {
+            justify-self: end;
+        }
+
+        .contact-button:hover,
+        .project-button:hover {
+            background-color: #e76f51;
+            color: white;
+            transform: translateY(-4px);
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #a8dadc;
+        }
+
+
+        .home {
+            height: 850px;
+            padding: 80px 10%;
+
+            background-color: #e8f1ff;
+
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            align-items: center;
+            align-content: center;
+            gap: 40px;
+        }
+
+        .home h1 {
+            color: #243b55;
+            font-size: 38px;
+
+            animation: homeMove 2s ease;
+        }
+
+        .home p {
+            margin-top: 20px;
+            line-height: 1.7;
+        }
+
+        .project-button {
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 35px;
+            text-align: center;
+
+            border: 3px solid #457b9d;
+            border-radius: 10px;
+
+            animation: profileMove 2s ease;
+        }
+
+        .card h2 {
+            color: #457b9d;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            margin-top: 8px;
+        }
+
+
+        .about {
+            height: 850px;
+            padding: 80px 10%;
+
+            background-color: white;
+
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about h1 {
+            color: #243b55;
+        }
+
+        .about p {
+            background-color: #edf2ff;
+            padding: 35px;
+            line-height: 1.8;
+
+            border-left: 5px solid #457b9d;
+            border-radius: 8px;
+        }
+
+
+        .education {
+            height: 850px;
+            padding: 80px 10%;
+
+            background-color: #eaf6f3;
+        }
+
+        .education h1 {
+            text-align: center;
+            color: #243b55;
+            margin-bottom: 40px;
+        }
+
+        .education-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .education-list p {
+            background-color: white;
+            padding: 30px;
+
+            text-align: center;
+            line-height: 1.7;
+
+            border-radius: 8px;
+            transition: 0.4s;
+        }
+
+        .education-list p:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px #bbb;
+        }
+
+
+        .skills {
+            height: 850px;
+            padding: 80px 10%;
+
+            background-color: #eeeaff;
+        }
+
+        .skills h1 {
+            text-align: center;
+            color: #243b55;
+            margin-bottom: 40px;
+        }
+
+        .skill {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .skill p {
+            background-color: white;
+            padding: 30px;
+
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+
+            border-radius: 8px;
+            transition: 0.4s;
+        }
+
+        .skill p:hover {
+            transform: scale(1.08);
+            background-color: #457b9d;
+            color: white;
+        }
+
+
+        .projects {
+            height: 850px;
+            padding: 80px 10%;
+
+            background-color: #f8eaf4;
+        }
+
+        .projects h1 {
+            text-align: center;
+            color: #243b55;
+            margin-bottom: 40px;
+        }
+
+        .projects-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .project {
+            background-color: white;
+            padding: 35px;
+
+            border-radius: 8px;
+            border-top: 5px solid #457b9d;
+            transition: 0.4s;
+        }
+
+        .project h2 {
+            text-align: center;
+            color: #457b9d;
+            margin-bottom: 20px;
+        }
+
+        .project p {
+            line-height: 1.7;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px #bbb;
+        }
+
+
+        .contact {
+            height: 600px;
+            padding: 80px 10%;
+
+            background-color: #e8f1ff;
+        }
+
+        .contact h1 {
+            text-align: center;
+            color: #243b55;
+            margin-bottom: 40px;
+        }
+
+        .form {
+            max-width: 600px;
+            margin: auto;
+
+            display: grid;
+            gap: 15px;
+        }
+
+        .form input,
+        .form textarea {
+            padding: 15px;
+
+            border: 1px solid #aaa;
+            border-radius: 7px;
+
+            font-size: 16px;
+        }
+
+        .form textarea {
+            height: 140px;
+        }
+
+        .form button {
+            padding: 15px;
+
+            background-color: #243b55;
+            color: white;
+
+            border: none;
+            border-radius: 7px;
+
+            cursor: pointer;
+
+            transition: 0.4s;
+        }
+
+        .form button:hover {
+            background-color: #457b9d;
+            transform: translateY(-5px);
+        }
+
+
+        @keyframes homeMove {
+
+            from {
+                transform: translateX(-120px) scale(0.8);
+            }
+
+            to {
+                transform: translateX(0) scale(1);
+            }
+
+        }
+
+
+        @keyframes profileMove {
+
+            from {
+                transform: translateX(120px) scale(0.7) rotate(5deg);
+            }
+
+            to {
+                transform: translateX(0) scale(1) rotate(0);
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .header {
+                display: block;
+                text-align: center;
+            }
+
+            .header h1 {
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+            .contact-button {
+                display: block;
+                margin: 15px auto 0;
+                width: 130px;
+            }
+
+            ul {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .home {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .education-list {
+                grid-template-columns: 1fr;
+            }
+
+            .skill {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-list {
+                grid-template-columns: 1fr;
+            }
+
+            .home h1 {
+                font-size: 30px;
+            }
+
+        }
+
+
+        .footer {
+            background-color: #243b55;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <h1>Honey Portfolio</h1>
+
+        <ul>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#qualification">Qualification</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+        </ul>
+
+        <a class="contact-button" href="#contact">Contact Me</a>
+
+    </div>
+
+
+    <!-- HOME -->
+
+    <div class="home" id="home">
+
+        <div>
+
+            <h1>Hello, I am Honey Treesa Sunny</h1>
+
+            <p>
+                BCA Graduate | MCA 1st Year Student
+            </p>
+
+            <p>
+                I am interested in web development, programming,
+                databases, and data science. I enjoy learning new
+                technologies and developing real-world projects.
+            </p>
+
+            <a class="project-button" href="#projects">See My Projects</a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Honey Treesa Sunny</h2>
+
+            <p>MCA 1st Year Student</p>
+
+            <p>BCA Graduate</p>
+
+            <p>Interested in Web Development</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ABOUT -->
+
+    <div class="about" id="about">
+
+        <h1>About Me</h1>
+
+        <p>
+
+            I am a BCA graduate currently pursuing my first year
+            of MCA. I am interested in web development, programming,
+            databases, and new technologies.
+
+            <br><br>
+
+            I enjoy learning through practical projects and
+            developing solutions for real-world problems.
+
+            <br><br>
+
+            I have worked on projects such as NoteBridge and
+            ResolveX, which helped me improve my programming,
+            web development, and database skills.
+
+        </p>
+
+    </div>
+
+
+    <!-- QUALIFICATION -->
+
+    <div class="education" id="qualification">
+
+        <h1>Qualification</h1>
+
+        <div class="education-list">
+
+            <p>
+
+                <b>Master of Computer Applications (MCA)</b>
+
+                <br><br>
+
+                Currently Pursuing - 1st Year
+
+            </p>
+
+
+            <p>
+
+                <b>Bachelor of Computer Applications (BCA)</b>
+
+                <br><br>
+
+                MG University
+
+                <br>
+
+                Percentage: 74%
+
+                <br>
+
+                Year of Passing: 2026
+
+            </p>
+
+
+            <p>
+
+                <b>Class XII</b>
+
+                <br><br>
+
+                Muslim Girls HSS, Erattupetta
+
+                <br>
+
+                Percentage: 82.75%
+
+                <br>
+
+                Year of Passing: 2023
+
+            </p>
+
+
+            <p>
+
+                <b>Class X</b>
+
+                <br><br>
+
+                Carmel Rani Public School, Variyanikkadu
+
+                <br>
+
+                Percentage: 80.6%
+
+                <br>
+
+                Year of Passing: 2021
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- SKILLS -->
+
+    <div class="skills" id="skills">
+
+        <h1>Skills</h1>
+
+        <div class="skill">
+
+            <p>Java</p>
+
+            <p>Python</p>
+
+            <p>SQL</p>
+
+            <p>PHP</p>
+
+            <p>HTML</p>
+
+            <p>CSS</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROJECTS -->
+
+    <div class="projects" id="projects">
+
+        <h1>Projects</h1>
+
+        <div class="projects-list">
+
+            <div class="project">
+
+                <h2>NoteBridge</h2>
+
+                <p>
+
+                    NoteBridge is a web platform where students can
+                    upload and download study notes. It is developed
+                    using PHP and MySQL. The project also includes
+                    a coin-based system for transactions.
+
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h2>ResolveX</h2>
+
+                <p>
+
+                    ResolveX is a local issue reporting system that
+                    allows users to report local problems and helps
+                    in managing and resolving reported issues
+                    efficiently.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+<!-- CONTACT -->
+
+    <div class="contact" id="contact">
+    <h1>Contact Me</h1>
+    <form class="form">
+
+        <input
+                type="text"
+                placeholder="Enter your name">
+
+            <input
+                type="email"
+                placeholder="Enter your email">
+
+            <input
+                type="text"
+                placeholder="Enter subject">
+
+            <textarea
+                placeholder="Enter your message">
+            </textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+<!-- FOOTER -->
+
+    <div class="footer">
+
+        <p>
+            © 2026 Honey Treesa Sunny
+        </p>
+
+    </div>
+</body>
+</html>
