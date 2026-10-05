@@ -1,0 +1,305 @@
+<html>
+    <head>
+        <title>Transitions and Animations</title>
+
+<style>
+
+    body {
+        background-color: #f5f5f5;
+    }
+
+    .container {
+        width: 800px;
+        margin: 30px auto;
+        padding: 30px;
+        background-color: white;
+        border: 3px solid rgb(224, 41, 188);
+        border-radius: 20px;
+        box-shadow: 0 8px 20px gray;
+        text-align: center;
+    }
+
+    button {
+
+        margin-left: 20px;
+        width: 100px;
+        height: 50px;
+        background-color: rgb(251, 128, 229);
+        border: none;
+        border-radius: 50px;
+        transition: 1s;
+
+    }
+
+    button:hover {
+
+        background-color: rgb(69, 238, 176);
+        transform: scale(1.1);
+
+    }
+
+    .b1 {
+
+        width: 100px;
+        height: 50px;
+        background-color: rgb(224, 41, 188);
+        border: none;
+        border-radius: 3px;
+        transition: 1s;
+        margin-left: 20px;
+
+    }
+
+    .b1:hover {
+
+        background-color: rgb(168, 92, 240);
+        transform: scale(1.1);
+
+    }
+
+    .b2 {
+
+        width: 100px;
+        height: 50px;
+        background-color: rgb(233, 214, 11);
+        border: none;
+        border-radius: 7px;
+        transition: 1s;
+        margin-left: 20px;
+
+    }
+
+    .b2:hover {
+
+        background-color: rgb(64, 62, 62);
+        transform: scale(1.1);
+
+    }
+
+    .b3 {
+
+        width: 100px;
+        height: 50px;
+        background-color: rgb(237, 37, 47);
+        border: none;
+        border-radius: 70px;
+        transition: 1s;
+        margin-left: 20px;
+
+    }
+
+    .b3:hover {
+
+        background-color: bisque;
+        transform: scale(1.1);
+
+    }
+
+    .box {
+
+        width: 150px;
+        height: 150px;
+        background-color: rgb(96, 192, 240);
+        animation: honey 1s ease alternate infinite;
+
+    }
+
+    .box2 {
+
+        margin-left: 130px;
+        width: 100px;
+        height: 100px;
+        background-color: rgb(231, 100, 109);
+        border-radius: 100%;
+        animation: hello 3s ease-out 2s alternate infinite;
+
+    }
+
+    .box3 {
+        display: flex;
+        width: 100px;
+        height: 100px;
+        background-color: rgb(238, 156, 41);
+        animation: hi 0.5s ease-in-out 2s alternate infinite;
+
+    }
+
+    .box4 {
+
+        width: 100px;
+        height: 150px;
+        background-color: rgb(27, 185, 122);
+        border-radius: 1%;
+        animation: bye 2s ease-in 2s alternate infinite;
+
+    }
+
+    .load {
+
+        width: 100px;
+        margin-bottom: 80px;
+        height: 100px;
+        border: 5px solid gray;
+        border-radius: 50%;
+        border-top: solid blue;
+        animation: spin 1s linear infinite;
+
+    }
+
+    .load1 {
+
+        width: 100px;
+        height: 100px;
+        border: 10px solid rgb(232, 110, 69);
+        border-radius: 1%;
+        border-top: solid rgb(213, 215, 57);
+        animation: spin1 1s linear infinite;
+
+    }
+
+    .triangle {
+
+        width: 0;
+        height: 0;
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-bottom: 100px solid rgb(168, 92, 240);
+        animation: triangle 2s ease-in-out alternate infinite;
+
+    }
+
+    @keyframes spin {
+
+        to {
+
+            transform: rotate(360deg);
+
+        }
+
+    }
+
+    @keyframes spin1 {
+
+        to {
+
+            transform: rotate(360deg);
+
+        }
+
+    }
+
+    @keyframes bye {
+
+        to {
+
+            transform: rotate(360deg);
+
+        }
+
+    }
+
+    @keyframes hi {
+
+        to {
+
+            transform: rotate(90deg);
+
+        }
+
+    }
+
+    @keyframes hello {
+
+        to {
+
+            transform: scale(0);
+
+        }
+
+    }
+
+    @keyframes honey {
+
+        from {
+
+            transform: scale(0.5);
+
+        }
+
+        to {
+
+            transform: scale(1);
+
+        }
+
+    }
+
+    @keyframes triangle {
+
+        from {
+
+            transform: translateX(-30px);
+
+        }
+
+        to {
+
+            transform: translateX(30px);
+
+        }
+
+    }
+
+</style>
+
+</head>
+<body>
+    <div class="container">
+
+    <h1>Transitions & Animations</h1>
+
+    
+
+    <button>Action</button>
+
+    
+
+    <button class="b2">Action</button>
+
+    <button class="b3">Action</button>
+
+    <br><br>
+    <br><br>
+
+    <h2>Animations</h2>
+
+    <div class="box"></div>
+
+    <br><br>
+
+    <div class="box2"></div>
+
+    <br><br>
+
+    <div class="box3"></div>
+
+    <br><br>
+
+    <div class="box4"></div>
+
+    <br><br>
+
+    <div class="load"></div>
+
+    <br><br>
+
+    <div class="load1"></div>
+
+    <br><br>
+
+    
+    <div class="triangle"></div>
+
+</div>
+
+</body></html>
