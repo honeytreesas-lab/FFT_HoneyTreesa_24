@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #fff8ed;
+        }
+
+        nav {
+            padding: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            list-style-type: none;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .home {
+            text-align: center;
+            height: 830px;
+            padding-top: 150px;
+            box-sizing: border-box;
+            background-color: #fff8ed;
+        }
+        
+
+        h1 {
+
+            text-align: center;
+            color: #fff8ed;
+            text-shadow: 2px 3px 10px #8f2d14;
+
+        }
+
+        header {
+
+            background: #e85d04;
+        }
+
+
+        .section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+            min-height: 500px;
+            box-sizing: border-box;
+            height: 830px;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 35px;
+            color: #6b2d1a;
+        }
+
+        
+        .details {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        
+        }
+
+        .box {
+            background-color: #fff3d6;
+            padding: 25px 20px;
+            text-align: center;
+            border-left: 6px solid #e85d04;
+            box-shadow: 0 2px 8px rgba(107, 45, 26, 0.15);
+        }
+
+        .box h3 {
+            margin-bottom: 10px;
+            color: #e85d04;
+            font-size: 22px;
+        }
+
+        .box p {
+            color: #6b2d1a;
+            line-height: 1.5;
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff3d6;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            border: 1px solid #e9b46a;
+            text-align: center;
+        }
+
+        th {
+            background-color: #e85d04;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #ffe4b5;
+        }
+
+
+        .stalls {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .stall {
+            background-color: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            
+        }
+
+        form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border: 1px solid #100f0f;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+      
+
+        button {
+            width: 50%;
+            padding: 13px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f48c06;
+            color: white;
+            font-size: 16px;
+            margin-left: 250px;
+        }
+
+        button:hover {
+            background-color: #d94801;
+        }
+
+       
+
+        .contact {
+            background-color: #2a9d8f;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .contact h2 {
+            margin-bottom: 15px;
+        }
+
+       
+
+        footer {
+            background-color: #6b2d1a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+@media (max-width: 900px) {  
+    .menu {
+                flex-direction: column;
+                gap: 15px;
+                 flex-wrap: wrap;
+                justify-content: center;
+            }
+
+             .details {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+           
+
+            .stalls {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            
+        }
+
+         @media (max-width: 600px) {
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .menu {
+                padding: 15px 10px;
+                flex-direction: column;
+                text-align: center;
+                gap: 8px;
+            }
+
+            .details,
+            .stalls {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 40px 15px;
+            }
+
+            .section h2 {
+                font-size: 26px;
+            }
+
+            th,
+            td {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+<h1>College Food Fest 2026</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#details">Details</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#stalls">Food Stalls</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- HOME -->
+<section class="home" id="home">
+<div>
+<h2>FOOD FEST 2026</h2>
+<p>Good Food, Great Company, Unforgettable Memories!</p>
+<p> 30th October 2026 | College Main Ground</p>
+</div>
+</section>
+<!-- DETAILS -->
+<section id="details" class="section">
+<h2>Details</h2>
+<div class="details">
+<div class="box">
+            <h3>Date</h3>
+            <p>30th October 2026</p>
+        </div>
+
+        <div class="box">
+            <h3>Time</h3>
+            <p>10:00 AM - 1:00 PM</p>
+        </div>
+<div class="box">
+            <h3>Venue</h3>
+            <p>College Food Court</p>
+        </div>
+<div class="box">
+            <h3> Organized By</h3>
+<p>Department of Hospitality and Culinary Arts</p>
+        </div>
+    </div>
+</section>
+<!-- Schedule -->
+<section id="schedule" class="section">
+    <h2>Event Schedule</h2>
+
+    <div class="schedule">
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Event</th>
+                <th>Venue</th>
+            </tr>
+
+            <tr>
+                <td>10:00 AM</td>
+                <td>Inauguration</td>
+                <td>College Main Ground</td>
+            </tr>
+
+            <tr>
+                <td>11:00 AM</td>
+                <td>Welcome and Chef Showcase</td>
+                <td>College Food Court</td>
+            </tr>
+
+            <tr>
+                <td>11:30 AM</td>
+                <td>Street Food Tasting</td>
+                <td>Food Stalls</td>
+            </tr>
+            <tr>
+                <td>01:00 PM</td>
+                <td>Live Cooking Demonstration</td>
+                <td>Demo Kitchen</td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="stalls" class="section">
+    <h2>Food Stalls</h2>
+<div class="stalls">
+<div class="stall">
+            <h3>Kerala Flavours</h3>
+            <p>Traditional Kerala dishes and snacks</p>
+        </div>
+<div class="stall">
+            <h3>Street Food Corner</h3>
+            <p>Popular street food from different places</p>
+           </div>
+<div class="stall">
+            <h3>Pizza and Pasta Hub</h3>
+            <p>Fresh pizza, pasta, and cheesy treats</p>
+        </div>
+</div>
+</section>
+<!-- Registration -->
+<section id="register" class="section">
+    <h2>Register</h2>
+<form>
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Phone Number</label>
+        <input type="number" placeholder="Enter your phone number" required>
+
+        <label>Department</label>
+        <input type="text" placeholder="Enter your department" required>
+<button type="submit">Submit</button>
+</form>
+</section>
+<section id="contact" class="contact">
+<h2>Contact</h2>
+    <p>For more information about the food fest, contact us:</p>
+    <p>Email: foodfest@college.au.edu.in</p>
+    <p>Phone: +91 9656175765</p>
+    <p>Venue: Alliance Main Campus, Anekal Road, Bengaluru</p>
+</section>
+<!-- Footer -->
+<footer>
+<p>© 2026 College Food Fest. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
